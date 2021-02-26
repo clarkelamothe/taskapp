@@ -28,7 +28,9 @@
               <!-- <i class="far fa-circle"></i>
               <i class="far fa-check-circle"></i> -->
             </span>
-            {{ task.nombre }} {{ task.estado }}
+            <p [ngClass]="task.estado ? 'text-decoration-line-through' : ''">
+              {{ task.nombre }}
+            </p>
             <span class="cursor text-danger" (click)="deleteTask(i)">
               <i class="fas fa-trash-alt"></i>
             </span>
